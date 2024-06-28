@@ -1,35 +1,61 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState } from "react";
+import reactLogo from "./assets/react.svg";
+import viteLogo from "/vite.svg";
+import "./App.css";
 
 function App() {
-  const [count, setCount] = useState(0)
+  let [count, setCount] = useState(0);
+
+  function addValue() {
+    setCount(count + 1);
+  }
+  function subValue() {
+    setCount(count - 1);
+  }
+  function setZero() {
+    setCount(count = 0);
+  }
 
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+      <div id="container1">
+        <h1 id="head">
+          Simple Counter targetting towards UI update functionality of React
+        </h1>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
+      <div id="buttons">
+        <button onClick={addValue} class="butt" id="adder">
+          Add
         </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
+        <button onClick={subValue} class="butt" id="subtractor">
+          Subtract
+        </button>
+        <button onClick={setZero} class="butt" id="subtractor">
+          Reset
+        </button>
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <div class="displays">
+      <div id="display1">
+        <button class="count">Count:{count}</button>
+        <button class="count">Count:{count}</button>
+        <button class="count">Count:{count}</button>
+        <button class="count">Count:{count}</button>
+        <button class="count">Count:{count}</button>
+        <button class="count">Count:{count}</button>
+        <button class="count">Count:{count}</button>
+      </div>
+      <div id="display2">
+        <button class="button-30" role="button">Count:{count}</button>
+        <button class="button-30" role="button">Count:{count}</button>
+        <button class="button-30" role="button">Count:{count}</button>
+        <button class="button-30" role="button">Count:{count}</button>
+        <button class="button-30" role="button">Count:{count}</button>
+        <button class="button-30" role="button">Count:{count}</button>
+        <button class="button-30" role="button">Count:{count}</button>
+        </div>
+        </div>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
