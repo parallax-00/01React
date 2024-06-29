@@ -1,0 +1,8 @@
+body{
+  background-color: #212121;
+}
+
+#Head{
+  color: antiquewhite;
+  transform: translate(40%,0);
+}
