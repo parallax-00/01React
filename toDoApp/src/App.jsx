@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext, useState,useEffect } from "react";
 import ToDoProvider from "./contexts";
 import "./App.css";
 
@@ -18,14 +18,9 @@ function App() {
     setTodo((prev)=>prev.map((prev)=>prev.id===id)?{...prev, completed:!prev.completed}:prev)
   }
 
-  // Working On Local Storage functionality---
-  //
-  ///
-  //START HERE!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-  //
-  //
-  //
-  
+  //? Working On Local Storage functionality---
+
+
 
 
   return (
